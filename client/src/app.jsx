@@ -11,7 +11,9 @@ class App extends React.Component {
     super()
     this.state = {
       allProds: [],
-      mainprod: ''
+      clicked: false,
+      mainprod: '',
+      mainImage: ''
     }
     this.getProduct = this.getProduct.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -22,9 +24,10 @@ class App extends React.Component {
   getProduct() {
     axios.get('/products')
       .then((results) => {
+        var random = Math.floor(Math.random()*results.data.length);
         this.setState({
           allProds: results.data,
-          mainprod: results.data[0]
+          mainprod: results.data[random],
         })
       })
       .catch((err) => {
@@ -33,7 +36,8 @@ class App extends React.Component {
   }
   handleClick(e) {
     this.setState({
-      mainprod: e.target.value
+      clicked: true,
+      mainImage: e.target.src
     })
   }
 
@@ -42,14 +46,18 @@ class App extends React.Component {
       return (
         <div>Welcome!</div>
       )
-    } else {
+    }
+    if (this.state.clicked === true) {
       return(
         <div>
           <div className="shopall">
             <a className="text" href="https://target.com/games">Shop All Games</a></div>
           <span id="productview">
-          <div className="title"><h2>{this.state.mainprod.item}</h2></div>
-            <ProductView product={this.state.mainprod}/>
+          <div className="title"><h1>{this.state.mainprod.item}</h1></div>
+          <div className="mainImageContainer">
+            <img className="mainImage" src={this.state.mainImage}/>
+          </div>
+
           </span>
           <span id="fakecarousel">
             <FakeCarousel images={this.state.mainprod.imgUrl} handleClick={this.handleClick} />
@@ -63,7 +71,28 @@ class App extends React.Component {
         </div>
       )
     }
+      return(
+        <div>
+          <div className="shopall">
+            <a className="text" href="https://target.com/games">Shop All Games</a></div>
+          <span id="productview">
+          <div className="title"><h1>{this.state.mainprod.item}</h1></div>
+            <ProductView item={this.state.mainprod}/>
+          </span>
+          <span id="fakecarousel">
+            <FakeCarousel images={this.state.mainprod.imgUrl} handleClick={this.handleClick} />
+          </span>
+          <span className="price">
+            <PriceView product={this.state.mainprod}/>
+          </span>
+          <div className="location">
+            <Location />
+          </div>
+        </div>
+      )
+
   }
+
 }
 
 export default App;
