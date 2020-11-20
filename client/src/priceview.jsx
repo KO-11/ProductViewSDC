@@ -2,7 +2,7 @@ import React from 'react';
 
 var PriceView = function(props) {
   return(
-    <div>
+    <div className="price-view-container">
       <div>
         <h2>
           ${props.product.price}

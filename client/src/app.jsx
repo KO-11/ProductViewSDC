@@ -3,6 +3,7 @@ import ProductView from './productview.jsx';
 import PriceView from './priceview.jsx';
 import Location from './location.jsx';
 import FakeCarousel from './fakecarousel.jsx';
+import RatingsBar from './ratingsbar.jsx';
 import axios from 'axios';
 
 
@@ -13,13 +14,14 @@ class App extends React.Component {
       allProds: [],
       clicked: false,
       mainprod: '',
-      mainImage: ''
+      mainImage: '',
     }
     this.getProduct = this.getProduct.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
   componentDidMount() {
     this.getProduct();
+    console.log(this.state.mainprod.system);
   }
   getProduct() {
     axios.get('/products')
@@ -57,7 +59,6 @@ class App extends React.Component {
           <div className="mainImageContainer">
             <img className="mainImage" src={this.state.mainImage}/>
           </div>
-
           </span>
           <span id="fakecarousel">
             <FakeCarousel images={this.state.mainprod.imgUrl} handleClick={this.handleClick} />
@@ -65,8 +66,11 @@ class App extends React.Component {
           <span className="price">
             <PriceView product={this.state.mainprod}/>
           </span>
+          <span className="ratings-bar"><RatingsBar /></span> <a href="" className="questions">5</a>
+          <a href="" className="text" id="buy2"><b>Buy 2 get 1 free on select video games</b></a>
+          <p className="in-store">In-store or Online</p> <a href="" className="price-detail">Details</a>
           <div className="location">
-            <Location />
+            <Location system={this.state.mainprod.system}/>
           </div>
         </div>
       )
@@ -85,8 +89,13 @@ class App extends React.Component {
           <span className="price">
             <PriceView product={this.state.mainprod}/>
           </span>
+          <span className="ratings-bar"><RatingsBar /></span> <a href="" className="questions">5</a>
+          <svg height="24" width="24" className="tag">
+          <path fill="rgb(204, 0, 0)" d="M12.37 2L23 12.675 12.675 23 2 12.37V2h10.37zM8 5.5c-.677-.676-1.785-.665-2.476.025-.689.69-.7 1.798-.023 2.475.676.677 1.784.666 2.474-.024.69-.69.701-1.799.025-2.476z" /> </svg>
+          <a href="" className="text" id="buy2"><b>Buy 2 get 1 free on select video games</b></a>
+          <p className="in-store">In-store or Online</p> <a href="" className="price-detail">Details</a>
           <div className="location">
-            <Location />
+            <Location system={this.state.mainprod.system}/>
           </div>
         </div>
       )

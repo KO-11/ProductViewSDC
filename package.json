@@ -9,7 +9,6 @@
     "build": "webpack -w",
     "seed": "node data/seed.js"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TeamM-V-P/Product-View.git"
@@ -28,7 +27,8 @@
     "morgan": "^1.10.0",
     "nodemon": "^2.0.6",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-star-ratings": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
