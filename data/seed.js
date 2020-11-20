@@ -1,4 +1,4 @@
-const db = require('/Users/jimmylin/Desktop/Product-View/db/index.js');
+const db = require('../db/index.js');
 const mongoose = require('mongoose');
 var product = [
   {
