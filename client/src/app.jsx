@@ -53,7 +53,7 @@ class App extends React.Component {
           <div className="shopall">
             <a className="text" href="https://target.com/games">Shop All Games</a></div>
           <span id="productview">
-          <div className="title"><h1>{this.state.mainprod.item}</h1></div>
+          <div className="title">{this.state.mainprod.item}</div>
           <div className="mainImageContainer">
             <img className="mainImage" src={this.state.mainImage}/>
           </div>
@@ -76,7 +76,7 @@ class App extends React.Component {
           <div className="shopall">
             <a className="text" href="https://target.com/games">Shop All Games</a></div>
           <span id="productview">
-          <div className="title"><h1>{this.state.mainprod.item}</h1></div>
+          <div className="title">{this.state.mainprod.item}</div>
             <ProductView item={this.state.mainprod}/>
           </span>
           <span id="fakecarousel">

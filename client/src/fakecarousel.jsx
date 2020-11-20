@@ -5,7 +5,7 @@ var FakeCarousel = function (props) {
   <div className="fakescroller">
     {props.images.map((image, index) => {
       return (
-      <div>
+      <div key={index}>
           <img className="fakecarousel"src={image} onClick={props.handleClick} ></img>
       </div>
       )

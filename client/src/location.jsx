@@ -10,13 +10,14 @@ var Location = function() {
           &nbsp;
           <button  id="button1"  className="button">Pick it up</button>
         </div>
-        <div className="locationtext">Ready to be picked up in 4 hours!</div>
+        <div className="pickup-text"><small>Ready within 4 hours for pickup inside the store.</small></div>
+        <span className="pickup-text"><small>Aisle D37</small></span>
       </div>
 
       <br/>
 
       <div id="sameday">
-        <span className="sameday">Same Day Delivery</span> to
+        <span className="sameday">Same Day Delivery</span>
         <button id="button2"className="button">Deliver It</button>
         <div><a href="https://www.target.com"className="text"><small>Edit zip code</small></a></div>
       </div>
