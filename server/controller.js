@@ -1,4 +1,4 @@
-const db = require('/Users/jimmylin/Desktop/Product-View/db/models.js');
+const db = require('../db/models.js');
 const controller = {
   get: (req, res) => {
     db.find()
