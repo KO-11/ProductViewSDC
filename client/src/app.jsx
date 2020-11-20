@@ -67,6 +67,8 @@ class App extends React.Component {
             <PriceView product={this.state.mainprod}/>
           </span>
           <span className="ratings-bar"><RatingsBar /></span> <a href="" className="questions">5</a>
+          <svg height="24" width="24" className="tag">
+          <path fill="rgb(204, 0, 0)" d="M12.37 2L23 12.675 12.675 23 2 12.37V2h10.37zM8 5.5c-.677-.676-1.785-.665-2.476.025-.689.69-.7 1.798-.023 2.475.676.677 1.784.666 2.474-.024.69-.69.701-1.799.025-2.476z" /> </svg>
           <a href="" className="text" id="buy2"><b>Buy 2 get 1 free on select video games</b></a>
           <p className="in-store">In-store or Online</p> <a href="" className="price-detail">Details</a>
           <div className="location">

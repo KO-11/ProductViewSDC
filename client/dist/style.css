@@ -250,10 +250,10 @@
 }
 .mainImageContainer {
   position: relative;
-  height: 398px;
-  width: 398px;
-  left: 21%;
-  top: 130px;
+  height: 400px;
+  width: 400px;
+  left: 20%;
+  top: 150px;
   margin: 0px;
   padding: 0px;
   overflow: scroll;
