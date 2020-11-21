@@ -10,7 +10,7 @@ class Location extends React.Component {
   render() {
     if (this.props.system === 'PS5') {
       return(
-        <div>
+        <div className="right-panel">
         <div id="pickup">
           <span className="pickup">Pick up today</span> at
           <div>
@@ -41,7 +41,7 @@ class Location extends React.Component {
       )
     } else {
       return(
-        <div>
+        <div className="right-panel">
           <div id="pickup">
             <span className="pickup">Pick up today</span> at
             <div>

@@ -24,7 +24,7 @@ class App extends React.Component {
     console.log(this.state.mainprod.system);
   }
   getProduct() {
-    axios.get('/products')
+    axios.get('/api/items')
       .then((results) => {
         var random = Math.floor(Math.random()*results.data.length);
         this.setState({
@@ -51,7 +51,7 @@ class App extends React.Component {
     }
     if (this.state.clicked === true) {
       return(
-        <div>
+        <div className="main-view">
           <div className="shopall">
             <a className="text" href="https://target.com/games">Shop All Games</a></div>
           <span id="productview">
@@ -78,7 +78,7 @@ class App extends React.Component {
       )
     }
       return(
-        <div>
+        <div className="main-view">
           <div className="shopall">
             <a className="text" href="https://target.com/games">Shop All Games</a></div>
           <span id="productview">

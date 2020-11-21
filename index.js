@@ -7,10 +7,11 @@ const mongoose = require('mongoose');
 const bodyparser = require('body-parser');
 const db = require('./db/index.js');
 
+
 const app = express();
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'client', 'dist')));
-app.use('/', router);
+app.use('/api', router);
 app.use(bodyparser.json());
 
 app.listen(port, () => console.log(`Listening on ${port}`));

@@ -2,7 +2,7 @@ const router = require('express').Router();
 const controller = require('./controller.js');
 
 router
-  .route('/products')
+  .route('/items')
   .get(controller.get)
   .post(controller.post)
   .delete(controller.delete)
