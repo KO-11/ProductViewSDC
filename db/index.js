@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
-const mongoUri = "mongodb://localhost/products";
+const mongoUri = "mongodb://localhost/items";
 const db = mongoose.connect(mongoUri, { "useNewUrlParser": true })
   .then(()=> {
     console.log("Mongo DB connected");
@@ -9,7 +9,7 @@ const db = mongoose.connect(mongoUri, { "useNewUrlParser": true })
   .catch((err) => {
     console.log(err)
   });
-const Products = mongoose.Schema({
+const Items = mongoose.Schema({
   id: {type: Number},
   item: {type: String},
   price: {type: Number},
@@ -17,6 +17,6 @@ const Products = mongoose.Schema({
   system: {type: String}
 });
 
-const Game = mongoose.model('Game', Products);
+const Game = mongoose.model('Game', Items);
 
 module.exports = Game;
