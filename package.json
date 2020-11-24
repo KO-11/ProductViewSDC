@@ -5,7 +5,7 @@
   "main": "./server/index.js",
   "scripts": {
     "test": "jest",
-    "start": "node ./server/index.js",
+    "start": "node ./server/index.js & npm run seed",
     "build": "webpack -w",
     "seed": "node data/seed.js"
   },
@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/TeamM-V-P/Product-View#readme",
   "dependencies": {
+    "aws": "0.0.3-2",
     "axios": "^0.21.0",
+    "cli": "^1.0.1",
     "express": "^4.17.1",
     "lodash": "^4.17.20",
     "mongoose": "^5.10.15",

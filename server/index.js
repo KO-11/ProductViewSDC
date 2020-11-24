@@ -7,6 +7,8 @@ const bodyparser = require('body-parser');
 const app = express();
 
 app.use(morgan('dev'));
+//dirname is global but path goes based on relative files.
+//it was routing to the old path.
 app.use(express.static(path.join(__dirname, '..','client', 'dist')));
 app.use('/api', router);
 app.use(bodyparser.json());
