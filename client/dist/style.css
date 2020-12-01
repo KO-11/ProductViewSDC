@@ -1,3 +1,7 @@
+#omega {
+  margin-bottom: 200px;
+}
+
 .title {
   position: absolute;
   top: 9%;
@@ -9,6 +13,12 @@
   margin: 0px;
   padding: 0px;
 }
+.tag {
+  position: absolute;
+  left: 48.3%;
+  top: 25.8%;
+  z-index: 5;
+}
 .mainviewer {
   position: relative;
   width: 100%;
@@ -17,39 +27,56 @@
   padding: 0px;
   z-index: 5;
 }
-.tag {
- position: absolute;
- left: 48.3%;
- top: 25.8%;
- z-index: 5;
-}
 .zoomContainer {
   position: relative;
-  height: 400px;
-  width: 400px;
-  left: 20%;
-  top: 150px;
+  height: 360px;
+  width: 360px;
+  left: 23.5%;
+  top: 130px;
   margin: 0px;
   padding: 0px;
   overflow: hidden;
 }
-.fakescroller {
-  max-height: 398px;
-  overflow: scroll;
-  width: 200px;
-}
-
 .mainviewer:hover {
   transition: transform .5s ease;
   transform: scale(1.10);
 }
 
-.shopall {
+.mainImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  z-index: 5;
+}
+.mainImageContainer {
+  position: relative;
+  height: 360px;
+  width: 360px;
+  left: 23.5%;
+  top: 130px;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+.mainImage:hover {
+  transition: transform .5s ease;
+  transform: scale(1.10);
+}
+.fakescroller {
+  max-height: 400px;
+  overflow: scroll;
+  width: 150px;
+}
+
+
+#shopall {
   position: absolute;
   left: 13%;
   margin-top: 30px;
   font-size: 16px;
-  top: 80px;
+  top: 12%;
 }
 .shop {
   color: black;
@@ -83,7 +110,7 @@
   position: absolute;
   color: black;
   font-size: 12px;
-  left: 56.9%;
+  left: 56.7%;
   top: 28.2%;
 }
 
@@ -192,14 +219,12 @@
 }
 
 .fakecarousel {
-  width: 60%;
+  width: 100%;
   margin: 0px;
-
 }
 
 #fakecarousel {
   position: absolute;
-  width: 200px;
   left: 13%;
   top: 20%;
   margin: 0px;
@@ -215,7 +240,7 @@
 
 .checkbox {
   position: absolute;
-  top: 175px;
+  top: 195px;
 }
 
 .allstate {
@@ -232,8 +257,8 @@
 }
 #plan {
   position: absolute;
-  top: 183px;
-  right: 80px;
+  top: 190px;
+  right: 76px;
 }
 
 .locationtext {
@@ -241,30 +266,6 @@
   font-size: 16px;
   margin-left: 10px;
   top: 80px;
-}
-
-.mainImage {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-  z-index: 5;
-}
-.mainImageContainer {
-  position: relative;
-  height: 400px;
-  width: 400px;
-  left: 20%;
-  top: 150px;
-  margin: 0px;
-  padding: 0px;
-  overflow: hidden;
-
-}
-.mainImage:hover {
-  transition: transform .5s ease;
-  transform: scale(1.10);
 }
 
 .ratings-bar {
