@@ -10,3 +10,35 @@ It is currently not coded to work with Related Items but it shouldn't take any w
 My CSS is a bit wonky but I've gone through and tried to finesse it a little bit. 
 
 If my "shop all" element is giving you trouble, you can change it's orientation by adjusting the #shopall{} id in the css folder. That should be the only area that acts weird.
+
+## Table of Contents
+
+1. [Usage](#Usage)
+1. [Requirements](#requirements)
+1. [Development](#development)
+
+## Usage
+
+API endpoints:
+- GET: '/api/items' get all products.
+- PUT: '/api/items/:id' change one specific product.
+- POST: '/api/items' post a product.
+- DELETE: '/api/items' delete all reviews.
+
+## Requirements
+
+An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
+
+- Node 6.13.0
+- etc
+
+## Development
+
+### Installing Dependencies
+
+From within the root directory:
+
+```sh
+npm install -g webpack
+npm install
+```
