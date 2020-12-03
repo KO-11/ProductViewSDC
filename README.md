@@ -21,9 +21,12 @@ If my "shop all" element is giving you trouble, you can change it's orientation 
 
 API endpoints:
 - GET: '/api/items' get all products.
-- PUT: '/api/items/:id' change one specific product.
 - POST: '/api/items' post a product.
 - DELETE: '/api/items' delete all products.
+
+- GET: '/api/items/:id' get one specific product.
+- PUT: '/api/items/:id' change one specific product.
+- DELETE: '/api/items/:id' delete one specific product.
 
 ## Requirements
 
