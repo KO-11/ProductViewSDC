@@ -23,7 +23,7 @@ API endpoints:
 - GET: '/api/items' get all products.
 - PUT: '/api/items/:id' change one specific product.
 - POST: '/api/items' post a product.
-- DELETE: '/api/items' delete all reviews.
+- DELETE: '/api/items' delete all products.
 
 ## Requirements
 
