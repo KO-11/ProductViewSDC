@@ -7,5 +7,10 @@ router
   .post(controller.post)
   .delete(controller.delete)
 
+router
+  .route('/items/:id')
+  .get(controller.getOne)
+  .put(controller.put)
+  .delete(controller.deleteOne)
 
 module.exports = router;

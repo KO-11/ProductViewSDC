@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
-const mongoUri = "mongodb://database/items";
+const mongoUri = "mongodb://35.160.229.26/items";
 const db = mongoose.connect(mongoUri, { "useNewUrlParser": true })
   .then(()=> {
     console.log("Mongo DB connected");

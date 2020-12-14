@@ -1,0 +1,24 @@
+config:
+  target: "http://localhost:3005/api/items/999999"
+  http:
+    timeout: .1
+    pool: 225 # All HTTP requests from all virtual users will be sent over the same 10 connections
+  phases:
+    - duration: 5
+      arrivalRate: 5000
+      # arrivalCount: 152481
+      name: 0
+    # - duration: 10
+    #   arrivalRate: 500
+    #   rampTo: 800
+    #   name: Ramp up load
+    # - duration: 10
+    #   arrivalRate: 1000
+    #   name: Sustained load
+scenarios:
+  # We define one scenario:
+  - name: "Get one game"
+    flow:
+      # Get the details of the product:
+      - get:
+          url: "/"
