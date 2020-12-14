@@ -13,7 +13,7 @@ app.use(morgan('dev'));
 //it was routing to the old path.
 app.use(express.static(path.join(__dirname, '..','client', 'dist')));
 app.use('/api', router);
-app.use('/loaderio-ed7335e55c3c88cd716c6d40eb93fb25.txt', function(req, res){
+app.use('/loaderio-817b869e5e1cbfc2d59c8b264868440f.txt', function(req, res){
   res.send('./load.txt')
 })
 
